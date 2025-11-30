@@ -6,79 +6,97 @@
     <title>The Little Rich Mouse – Details</title>
     <link rel="stylesheet" href="style.css">
 
-    <script>
-        let showingFront = true;
-        
-        function nextImage() {
-            const img = document.getElementById("detailImage");
-            showingFront = !showingFront;
+    <style>
+        .image-wrapper {
+            position: relative;
+            max-width: 450px;
+        }
+        .art-image {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        .arrow-left { left: 10px; }
+        .arrow-right { right: 10px; }
+        .arrow:hover { opacity: 1; }
 
-            if (showingFront) {
-                img.src = "little-rich-mous.jpg";
-            } else {
-                img.src = "little-rich-mous-back.jpg";
-            }
+        .zoom {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 28px;
+            background: rgba(255,255,255,0.8);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
         }
 
-        function zoomImage() {
-            const img = document.getElementById("detailImage");
-            img.classList.toggle("zoomed");
+        .back-link {
+            font-size: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+            color: #d4af37;
         }
-    </script>
-
+    </style>
 </head>
 
-<body class="detail-body">
+<body>
 
-<header class="nav">
-    <img src="logo.png" class="logo">
-    <nav>
-        <a href="index.html#about">ÜBER</a>
-        <a href="index.html#signature">SIGNATURE PIECE</a>
-        <a href="galerie.html">GALERIE</a>
-        <a href="index.html#process">ABLAUF</a>
-        <a href="index.html#contact">KONTAKT</a>
-    </nav>
-</header>
-
-<a href="galerie.html" class="back-btn">← Zurück zur Galerie</a>
+<a href="galerie.html" class="back-link">← Zurück zur Galerie</a>
 
 <div class="detail-container">
 
-    <!-- Bild-Slider -->
-    <div class="detail-image-box">
-        <img id="detailImage" src="little-rich-mous.jpg" class="detail-img" alt="The Little Rich Mouse">
+    <div class="image-wrapper">
+        <img id="mainImage" src="the-little-rich-mous.jpg" class="art-image">
 
-        <div class="arrow-left" onclick="nextImage()">‹</div>
-        <div class="arrow-right" onclick="nextImage()">›</div>
+        <span class="arrow arrow-left" onclick="showFront()">❮</span>
+        <span class="arrow arrow-right" onclick="showBack()">❯</span>
 
-        <div class="zoom-icon" onclick="zoomImage()">🔍</div>
+        <span class="zoom" onclick="zoomImage()">🔍</span>
     </div>
 
-    <!-- Infos rechts -->
     <div class="detail-info">
-        <h1 class="detail-title">The Little Rich Mouse</h1>
+        <h1>The Little Rich Mouse</h1>
 
-        <p class="detail-price"><strong>Preis:</strong> 1500 CHF</p>
-
+        <p><strong>Preis:</strong> 1500 CHF</p>
         <p><strong>Technik:</strong> Acryl auf Leinwand</p>
         <p><strong>Grösse:</strong> 69.5 × 49 × 1.5 cm</p>
 
-        <p class="detail-description">
-            „The Little Rich Mouse“ kombiniert frechen Luxus, kräftige Farben und spielerisches Design.
-            Die ikonische Maus macht das Werk zu einem einzigartigen Statement-Piece.
+        <p>
+            „The Little Rich Mouse“ kombiniert frechen Luxus,
+            kräftige Farben und spielerisches Design. Die ikonische
+            Maus macht das Werk zu einem echten Statement-Piece.
         </p>
 
-        <h3 class="detail-bid-title">Gebot abgeben</h3>
-        <input type="number" placeholder="Betrag in CHF" class="bid-input">
-        <button class="bid-button">Gebot senden</button>
+        <h2>Gebot abgeben</h2>
+        <form>
+            <input type="number" placeholder="Betrag in CHF" required>
+            <button type="submit">Gebot senden</button>
+        </form>
 
-        <p class="bid-note">
-            Sobald du ein Gebot abgibst, kann es nicht mehr gelöscht werden.
-        </p>
+        <p>Sobald du ein Gebot abgibst, kann es nicht mehr gelöscht werden.</p>
     </div>
-
 </div>
+
+<script>
+    function showBack() {
+        document.getElementById("mainImage").src = "the-little-rich-mous-back.jpg";
+    }
+    function showFront() {
+        document.getElementById("mainImage").src = "the-little-rich-mous.jpg";
+    }
+    function zoomImage() {
+        window.open(document.getElementById("mainImage").src, "_blank");
+    }
+</script>
 
 </body>
 </html>
