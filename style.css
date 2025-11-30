@@ -1,55 +1,71 @@
-/* Gesamtes Layout fixen */
+/* Grundlayout */
 html, body {
-    background-color: #0a0a14 !important;
+    background-color: #0a0a14;
     color: #f1d7a5;
-    font-family: Georgia, serif;
     margin: 0;
     padding: 0;
+    font-family: Georgia, serif;
     overflow-x: hidden;
-    max-width: 100%;
 }
 
 /* Überschriften */
-h1, h2 {
+h1, h2, h3 {
     color: #f1d7a5;
+    margin-bottom: 20px;
+}
+
+/* Galerie-Section */
+.gallery-section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+/* Grosse Überschrift Galerie */
+.gallery-section h1 {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+/* Galerie-Karte */
+.gallery-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    background-color: #fbf3de;
+    color: black;
+
+    padding: 40px;
+    width: 80%;
+    margin: 40px auto;
+    border-radius: 20px;
+}
+
+/* Galerie-Bild */
+.gallery-card img {
+    width: 350px;
+    border-radius: 12px;
+}
+
+/* Rotate-Bild 90 Grad */
+.rotate-90 {
+    transform: rotate(-90deg);
 }
 
 /* Buttons */
 .button {
+    display: inline-block;
     background-color: #d7b26d;
     color: #0a0a14;
     padding: 14px 28px;
     border-radius: 12px;
-    text-decoration: none;
     font-weight: bold;
-    display: inline-block;
+    text-decoration: none;
     margin-top: 20px;
 }
 
-/* Galerie */
-.gallery-section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.gallery-card {
-    display: flex;
-    background-color: #fbf3de;
-    color: #0a0a14;
-    padding: 40px;
-    width: 85%;
-    margin: 40px auto;
-    border-radius: 20px;
-    gap: 40px;
-    align-items: center;
-}
-
-.gallery-card img {
-    width: 350px;
-    border-radius: 14px;
-}
-
-/* Bild rotieren */
-.rotate-90 {
-    transform: rotate(-90deg);
+/* Button Hover */
+.button:hover {
+    background-color: #e2c48a;
 }
