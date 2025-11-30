@@ -112,7 +112,8 @@
 /* ZOOM OVERLAY */
 .zoom-overlay {
     position: fixed;
-    top: 0; left: 0;
+    top: 0; 
+    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.85);
@@ -125,7 +126,10 @@
 .zoom-image {
     max-width: 90%;
     max-height: 90%;
-    border-radius: 20px;/* --- GALERIE CARD --- */
+    border-radius: 20px;
+}
+
+/* --- GALERIE CARD --- */
 .galerie-card {
     display: flex;
     align-items: center;
@@ -179,5 +183,4 @@
 
 .galerie-button:hover {
     background: #bfa05d;
-}
 }
