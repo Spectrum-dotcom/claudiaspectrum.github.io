@@ -1,160 +1,249 @@
+/* -------------------------------- */
+/* GLOBAL STYLE – GOLD / NAVY LOOK  */
+/* -------------------------------- */
+
 body {
     margin: 0;
-    font-family: "Inter", Arial, sans-serif;
-    background: #0a1124;
-    color: white;
+    padding: 0;
+    background: #0a0f1a; /* edles dark navy */
+    color: #e6c87c; /* gold */
+    font-family: 'Georgia', serif;
 }
 
-header {
-    width: 100%;
-    padding: 18px 40px;
+/* Goldene Überschriften */
+h1, h2, h3, h4 {
+    color: #e6c87c;
+    font-weight: 600;
+}
+
+/* Text */
+p {
+    color: #e6c87c;
+    line-height: 1.7;
+}
+
+/* -------------------------------- */
+/* HEADER NAVIGATION */
+/* -------------------------------- */
+
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #0a1124;
+    padding: 20px 40px;
+    background: #000;
 }
 
 .logo {
-    font-size: 22px;
+    height: 55px;
 }
 
-nav a {
-    margin-left: 30px;
-    color: white;
+.nav a {
+    color: #e6c87c;
+    margin-left: 25px;
     text-decoration: none;
+    font-size: 16px;
 }
 
-nav a.active,
-nav a:hover {
-    color: #d4af37;
+.nav a:hover,
+.nav a.active {
+    color: white;
 }
+
+/* -------------------------------- */
+/* BUTTONS */
+/* -------------------------------- */
+
+button,
+.nav-btn,
+a.button {
+    background: #e6c87c;
+    color: #000;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover,
+a.button:hover {
+    background: white;
+}
+
+/* -------------------------------- */
+/* HERO BEREICH – Startseite */
+/* -------------------------------- */
 
 .hero {
-    padding: 150px 40px;
     text-align: center;
+    padding: 180px 40px 120px;
 }
 
-.section {
-    max-width: 900px;
-    margin: 90px auto;
-    text-align: center;
+.hero h1 {
+    font-size: 48px;
 }
 
-.btn {
-    display: inline-block;
-    background: #0d1a36;
-    padding: 14px 26px;
-    border-radius: 10px;
-    color: white;
-    text-decoration: none;
+.hero p {
+    font-size: 20px;
 }
 
-.btn:hover {
-    background: #d4af37;
-    color: black;
+/* -------------------------------- */
+/* GALERIE SEITE */
+/* -------------------------------- */
+
+.gallery-body {
+    background: #0a0f1a;
 }
 
 .gallery-container {
-    max-width: 1000px;
-    margin: 60px auto;
-}
-
-.card {
-    background: white;
-    color: black;
-    display: flex;
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 35px;
-}
-
-.card-img {
-    width: 350px;
-    border-radius: 15px;
-}
-
-.card-info {
-    margin-left: 30px;
-}/* GALLERY PAGE */
-.gallery-body, .detail-body {
-    background-color: #050A18;
-    color: #E5C07B;
-    font-family: 'Georgia', serif;
+    width: 85%;
+    margin: 0 auto;
+    padding: 80px 0;
 }
 
 .gallery-title {
     text-align: center;
-    font-size: 42px;
-    margin-top: 120px;
+    font-size: 46px;
     margin-bottom: 60px;
-    color: #E5C07B;
 }
 
-.gallery-container {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.gallery-item {
+/* Bildkarte */
+.gallery-card {
     display: flex;
-    gap: 40px;
-    padding: 40px;
-    background: rgba(255,255,255,0.05);
+    background: white;
     border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
 .gallery-img {
-    width: 380px;
-    border-radius: 12px;
+    width: 40%;
+    height: auto;
+    object-fit: cover;
 }
 
-/* 90° Drehung */
-.rotated {
-    transform: rotate(-90deg);
+.gallery-info {
+    width: 60%;
+    padding: 30px 40px;
+    color: #000;
 }
 
-.gallery-info-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.gallery-info h3 {
+    margin-top: 0;
+    color: #0a0f1a;
+    font-size: 28px;
+    font-weight: 700;
 }
 
-.gallery-btn {
+.gallery-info p {
+    color: #000;
+    font-size: 18px;
+}
+
+.details-btn {
     margin-top: 20px;
-    background: #0F1628;
-    padding: 14px 22px;
-    border-radius: 10px;
+    display: inline-block;
+    background: #0a0f1a;
     color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
     text-decoration: none;
-    width: fit-content;
 }
 
-/* DETAIL PAGE */
-.detail-container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 140px auto;
+.details-btn:hover {
+    background: #2a2f3a;
+}
+
+/* -------------------------------- */
+/* DETAILSEITE */
+/* -------------------------------- */
+
+.detail-body {
+    background: #0a0f1a;
+}
+
+.detail-section {
+    padding: 120px 8% 60px;
+}
+
+.detail-title {
+    text-align: center;
+    font-size: 46px;
+    margin-bottom: 50px;
+}
+
+.detail-wrapper {
     display: flex;
-    gap: 40px;
+    gap: 50px;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .detail-img {
     width: 420px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Bild drehen */
+.rotate90 {
+    transform: rotate(-90deg);
+}
+
+.detail-info {
+    max-width: 500px;
+}
+
+.detail-price {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.detail-warning {
+    margin-top: 30px;
+    color: #ffcc88;
+}
+
+.bid-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bid-form input {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.bid-btn {
+    background: #e6c87c;
+    color: #000;
+    padding: 12px 20px;
     border-radius: 12px;
 }
 
-.detail-info h1 {
-    font-size: 42px;
-    color: #E5C07B;
+.mail-link {
+    color: #e6c87c;
 }
 
-.detail-btn {
-    background: #0F1628;
+.mail-link:hover {
     color: white;
-    padding: 14px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    margin-top: 30px;
-    display: inline-block;
+}
+
+/* -------------------------------- */
+/* FOOTER */
+/* -------------------------------- */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #e6c87c;
+    opacity: 0.6;
 }
