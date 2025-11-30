@@ -611,3 +611,15 @@ h1 {
     text-decoration: none;
     color: #fff;
 }
+.back-link {
+    display: inline-block;
+    margin: 40px 60px;
+    color: #d9b97a;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.back-link:hover {
+    color: #f0d8a8;
+}
