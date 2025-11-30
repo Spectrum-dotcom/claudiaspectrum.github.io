@@ -2,77 +2,64 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>The Little Rich Mouse – Detail</title>
+  <title>The Little Rich Mouse – Details</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon-32x32.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="brand">
-        <img src="favicon-32x32.png" alt="Spectrum Bild Emblem" class="brand-mark">
-        <span class="brand-name">SPECTRUM BILD</span>
-      </a>
-      <nav class="main-nav">
-        <a href="index.html#about">ÜBER</a>
-        <a href="galerie.html" class="nav-active">GALERIE</a>
-        <a href="index.html#process">ABLAUF</a>
-        <a href="index.html#contact">KONTAKT</a>
-      </nav>
+
+<header class="header">
+  <div class="nav-wrapper">
+    <div class="nav-left">
+      <img src="logo.png" class="nav-logo" alt="Spectrum Bild Logo">
+      <span class="nav-title">SPECTRUM BILD</span>
     </div>
-  </header>
 
-  <main>
-    <section class="section section-detail">
-      <a href="galerie.html" class="back-link">← Zurück zur Galerie</a>
+    <nav class="nav-links">
+      <a href="index.html#about">Über</a>
+      <a href="galerie.html" class="active">Galerie</a>
+      <a href="index.html#prozess">Ablauf</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
 
-      <div class="detail-layout">
-        <div class="detail-image-wrapper">
-          <img src="the-little-rich-mous.jpg" alt="The Little Rich Mouse" class="detail-image art-image-rotated">
-        </div>
+<main class="section">
 
-        <div class="detail-info">
-          <h1>The Little Rich Mouse</h1>
+  <a href="galerie.html" class="back">← Zurück zur Galerie</a>
 
-          <p><span class="detail-label">Preis:</span> 1500 CHF</p>
-          <p><span class="detail-label">Technik:</span> Acryl auf Leinwand</p>
-          <p><span class="detail-label">Grösse:</span> 69.5 × 49 × 1.5 cm</p>
+  <div class="detail-wrapper">
 
-          <p class="detail-description">
-            Die kleine reiche Maus – ein modernes royales Emblem mit Humor.
-            Das Bild kombiniert Gold, Pink und eine ikonische Maus zu einem
-            echten Statement-Piece. Kräftige Farben, glänzende goldene Schrift
-            und ein frecher Blick machen dieses Werk zum Blickfang in jedem Raum.
-          </p>
+    <div class="detail-img-box">
+      <img src="the-little-rich-mous.jpg" class="detail-img rotated" alt="Art Piece">
+    </div>
 
-          <p class="detail-description">
-            Ideal für Wohnzimmer, Office oder Studio – überall dort, wo ein
-            Hauch von Luxus und ein Augenzwinkern zusammenkommen sollen.
-          </p>
+    <div class="detail-info">
+      <h1>The Little Rich Mouse</h1>
 
-          <a
-            href="mailto:sophia.zuechner@gmail.com?subject=Gebot%20für%20The%20Little%20Rich%20Mouse&body=Hallo%20Spectrum%20Bild%2C%0A%0Aich%20möchte%20ein%20Gebot%20für%20%22The%20Little%20Rich%20Mouse%22%20abgeben.%0A%0AMein%20Gebot%20in%20CHF%3A%20_____ %0AName%3A%20_____%0AKontakt%3A%20_____%0A%0AVielen%20Dank!"
-            class="primary-button detail-button"
-          >
-            Jetzt Gebot abgeben
-          </a>
+      <p class="label"><b>Preis:</b> 1500 CHF</p>
+      <p class="label"><b>Technik:</b> Acryl auf Leinwand</p>
+      <p class="label"><b>Grösse:</b> 69.5 × 49 × 1.5 cm</p>
 
-          <p class="detail-note">
-            Dein Gebot wird persönlich geprüft. Du erhältst per Mail eine
-            Rückmeldung, ob dein Angebot akzeptiert wurde und wie die Übergabe
-            oder der Versand organisiert wird.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+      <p class="desc">
+        Ein royales Statement-Piece: goldene Highlights, pinke Akzente
+        und die ikonische „Little Rich Mouse“ als Symbol für Mut & Wohlstand.
+      </p>
 
-  <footer class="site-footer">
-    <p>© 2025 Spectrum Bild · Luxury Branding & Art · Alle Rechte vorbehalten.</p>
-  </footer>
+      <a href="mailto:sophia.zuechner@gmail.com?subject=Gebot für The Little Rich Mouse" class="btn-primary">
+        Gebot abgeben
+      </a>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+  © 2025 Spectrum Bild – Luxury Branding & Art
+</footer>
+
 </body>
 </html>
