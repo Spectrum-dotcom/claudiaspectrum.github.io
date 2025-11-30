@@ -227,3 +227,13 @@ footer {
     color: #8c6d32; /* Gold */
     margin: 0;
 }
+.gallery-card {
+    display: flex;
+    align-items: center;
+    background: #f7eed8;
+    border-radius: 22px;
+    padding: 40px;
+    gap: 40px;
+    margin-bottom: 70px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
