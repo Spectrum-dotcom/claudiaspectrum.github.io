@@ -3,40 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Little Rich Mous – Details</title>
+    <title>The Little Rich Mous – Details & Gebote</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="dark-bg">
 
-<header>
-    <div class="logo">Spectrum Bild</div>
+<header class="nav">
+    <img src="logo.png" class="logo">
     <nav>
-        <a href="index.html">Home</a>
-        <a href="galerie.html" class="active">Galerie</a>
+        <a href="index.html#about">ÜBER</a>
+        <a href="index.html#signature">SIGNATURE PIECE</a>
+        <a href="galerie.html">GALERIE</a>
+        <a href="index.html#process">ABLAUF</a>
+        <a href="index.html#contact">KONTAKT</a>
     </nav>
 </header>
 
-<div class="detail-container">
-    <img src="the-little-rich-mous.jpg" class="detail-img" alt="The Little Rich Mous">
+<section class="detail-section">
 
-    <h2>The Little Rich Mous</h2>
-    <p>Acryl auf Leinwand – 69,5 × 49 × 1,5 cm</p>
-    <p><strong>Startpreis:</strong> 1500 CHF</p>
-    <p><strong>Aktuelles Gebot:</strong> 1500 CHF</p>
+    <h1 class="section-title">The Little Rich Mous</h1>
 
-    <h3>Neues Gebot abgeben</h3>
-    <p class="warnung">⚠️ Nach Abgabe kann ein Gebot nicht mehr zurückgesetzt werden.</p>
+    <div class="detail-wrapper">
 
-    <input type="number" id="gebot" placeholder="Neues Gebot in CHF eingeben">
+        <img src="the-little-rich-mous.jpg" class="detail-image rotated">
 
-    <a class="btn" href="mailto:spectrum.art.mail@gmail.com?subject=Gebot%20Little%20Rich%20Mous&body=Mein%20Gebot:%20">
-        Gebot jetzt senden
-    </a>
+        <div class="detail-info">
 
-    <br><br>
-    <a class="btn" href="galerie.html" style="background:#333;">Zurück zur Galerie</a>
-</div>
+            <p class="detail-text">
+                Acryl auf Leinwand – 69,5 × 49 × 1,5 cm<br>
+                Unikat – 2025
+            </p>
+
+            <p class="startprice"><b>Startpreis:</b> 1500 CHF</p>
+            <p class="currentbid"><b>Aktuelles Gebot:</b> 1500 CHF</p>
+
+            <h3 class="detail-subtitle">Beschreibung</h3>
+            <p class="detail-description">
+                „The Little Rich Mous“ ist ein freches, luxuriöses Street-Art-Piece,
+                das Humor und Reichtum kombiniert. Goldene Schriftzüge treffen auf eine
+                kleine Millionärs-Maus – ein Kunstwerk, das auffällt und gleichzeitig verspielt bleibt.
+            </p>
+
+            <h3 class="detail-subtitle">Wichtig – Auktionsregeln</h3>
+            <ul class="rules">
+                <li>Einmal abgegebenes Geld / Gebot kann nicht zurückgenommen werden.</li>
+                <li>Neue Gebote dürfen abgegeben werden, ältere können nicht gelöscht werden.</li>
+                <li>Der Zuschlag geht an das höchste gültige Gebot.</li>
+                <li>Bei Fragen zur Auktion kannst du mich jederzeit kontaktieren.</li>
+            </ul>
+
+            <a href="mailto:sophia.zuechner@gmail.com" class="btn-more">
+                Gebot abgeben oder Fragen stellen
+            </a>
+
+        </div>
+    </div>
+
+</section>
+
+<footer class="footer">
+    © 2025 Spectrum Bild · Luxury Branding & Art · Alle Rechte vorbehalten.
+</footer>
 
 </body>
 </html>
