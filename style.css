@@ -206,3 +206,24 @@ footer {
     color: #000;
     margin-bottom: 20px;
 }
+.gallery {
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gallery-title-block {
+    background: #f7eed8; /* beige */
+    border-radius: 16px;
+    padding: 35px 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+.gallery-title-block h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #8c6d32; /* Gold */
+    margin: 0;
+}
