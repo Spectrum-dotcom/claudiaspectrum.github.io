@@ -1,7 +1,10 @@
 /* ------------------- */
 /*   GLOBAL STYLE      */
 /* ------------------- */
-
+body.dark-bg {
+    background: #0b0c14; /* Navy-Dunkel */
+    color: #f2e4c2;      /* Gold-Beige Text */
+}
 /* Verhindert seitliches Scrollen */
 html, 
 body {
