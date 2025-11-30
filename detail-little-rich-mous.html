@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Little Rich Mouse – Details</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        let showingFront = true;
+
+        function swapImage() {
+            const img = document.getElementById("mainImage");
+            showingFront = !showingFront;
+
+            if (showingFront) {
+                img.src = "the-little-rich-mous.jpg";
+            } else {
+                img.src = "the-little-rich-mous-back.jpg";
+            }
+        }
+    </script>
+
 </head>
 
 <body>
@@ -20,22 +36,26 @@
     </nav>
 </header>
 
-<a href="galerie.html" class="back-btn">← zurück zur Galerie</a>
+<a href="galerie.html" class="back-btn">← Zurück zur Galerie</a>
 
 <div class="detail-wrapper">
 
-    <img src="the-little-rich-mous-back.jpg" class="detail-img">
+    <img id="mainImage" src="the-little-rich-mous.jpg" class="detail-img" onclick="swapImage()">
 
     <div class="detail-info">
+
         <h1>The Little Rich Mouse</h1>
 
         <p><strong>Preis:</strong> 1500 CHF</p>
-
-        <p><strong>Material:</strong> Acryl auf Leinwand</p>
+        <p><strong>Technik:</strong> Acryl auf Leinwand</p>
         <p><strong>Grösse:</strong> 69.5 × 49 × 1.5 cm</p>
 
-        <p>Die kleine reiche Maus – ein modernes royales Emblem, das Luxus mit Humor verbindet.</p>
+        <p>
+            Die kleine reiche Maus – ein modernes royales Emblem mit Humor.
+            Das Bild kombiniert Gold, Pink und eine ikonische Maus zu einem echten Statement-Piece.
+        </p>
 
+        <a href="#" class="btn" style="margin-top:20px;">Jetzt Gebot abgeben</a>
     </div>
 
 </div>
