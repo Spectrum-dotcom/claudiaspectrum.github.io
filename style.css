@@ -197,3 +197,50 @@ body {
     font-size: 1.3rem;
     color: #e6d3a3;
 }
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 8%;
+    background-color: #0b0b14;
+    color: #e6d3a3;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tag {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #e6d3a3;
+    opacity: 0.8;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 20px 0 30px;
+    color: #e6d3a3;
+}
+
+.subtitle {
+    font-size: 20px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    margin: 35px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.button-primary,
+.button-secondary {
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    text-decoration: no
