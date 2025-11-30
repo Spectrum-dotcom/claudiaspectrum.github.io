@@ -5,55 +5,54 @@
   <title>Galerie – Spectrum Bild</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon-32x32.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="brand">
-        <img src="favicon-32x32.png" alt="Spectrum Bild Emblem" class="brand-mark">
-        <span class="brand-name">SPECTRUM BILD</span>
-      </a>
-      <nav class="main-nav">
-        <a href="index.html#about">ÜBER</a>
-        <a href="galerie.html" class="nav-active">GALERIE</a>
-        <a href="index.html#process">ABLAUF</a>
-        <a href="index.html#contact">KONTAKT</a>
-      </nav>
+
+<header class="header">
+  <div class="nav-wrapper">
+    <div class="nav-left">
+      <img src="logo.png" class="nav-logo" alt="Spectrum Bild Logo">
+      <span class="nav-title">SPECTRUM BILD</span>
     </div>
-  </header>
 
-  <main>
-    <section class="section section-gallery">
-      <div class="section-heading">
-        <h1>Galerie</h1>
-      </div>
+    <nav class="nav-links">
+      <a href="index.html#about">Über</a>
+      <a href="galerie.html" class="active">Galerie</a>
+      <a href="index.html#prozess">Ablauf</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
 
-      <!-- Ein Art-Piece im Balken -->
-      <article class="gallery-card">
-        <div class="gallery-card-image">
-          <img src="the-little-rich-mous.jpg" alt="The Little Rich Mouse" class="art-image-rotated">
-        </div>
-        <div class="gallery-card-info">
-          <h2>The Little Rich Mouse</h2>
-          <p class="gallery-price">Preis: 1500 CHF</p>
-          <p class="gallery-short">
-            Eine kleine Maus mit grosser Attitude – Gold, Pink und royales Lettering
-            treffen auf Street-Art-Vibes.
-          </p>
-          <a href="detail-little-rich-mous.html" class="primary-button gallery-button">
-            Mehr Details & Bieten →
-          </a>
-        </div>
-      </article>
-    </section>
-  </main>
+<main class="section">
 
-  <footer class="site-footer">
-    <p>© 2025 Spectrum Bild · Luxury Branding & Art · Alle Rechte vorbehalten.</p>
-  </footer>
+  <h1 class="gallery-title">Galerie</h1>
+
+  <div class="gallery-item">
+    <div class="gallery-img-box">
+      <img src="the-little-rich-mous.jpg" class="gallery-img rotated" alt="Art Piece">
+    </div>
+
+    <div class="gallery-info">
+      <h2>The Little Rich Mouse</h2>
+      <p class="price">Preis: 1500 CHF</p>
+      <p class="desc">
+        Eine freche gold-pinkfarbene Maus – Symbol für Reichtum, Mut und Humor.
+      </p>
+
+      <a href="detail-little-rich-mous.html" class="btn-primary">
+        Details anzeigen
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  © 2025 Spectrum Bild – Luxury Branding & Art
+</footer>
+
 </body>
 </html>
