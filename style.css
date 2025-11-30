@@ -3,7 +3,13 @@
 /* ------------------- */
 body.dark-bg {
     background: #0b0c14; /* Navy-Dunkel */
-    color: #f2e4c2;      /* Gold-Beige Text */
+body {
+    background-color: #0a0a14; /* dunkles navy-schwarz-gold look */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* verhindert links/rechts scrollen */
+}
+color: #f2e4c2;      /* Gold-Beige Text */
 }
 /* Verhindert seitliches Scrollen */
 html, 
