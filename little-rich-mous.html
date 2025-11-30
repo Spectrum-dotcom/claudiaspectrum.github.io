@@ -1,156 +1,206 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Little Rich Mous – Details & Bieten</title>
+    <title>The Little Rich Mous – Details</title>
 
     <style>
         body {
             margin: 0;
-            padding: 0;
-            background: #0b0f1a;
-            font-family: 'Georgia', serif;
-            color: #e7d3a1;
+            background: #0a1a33;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: #000;
+            padding: 20px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: gold;
         }
 
         .container {
-            max-width: 1100px;
-            margin: 60px auto;
+            max-width: 900px;
+            margin: 40px auto;
             padding: 20px;
         }
 
-        h1 {
-            font-size: 45px;
+        .back-btn {
+            color: gold;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .layout {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .art-img {
+            width: 360px;
+            border-radius: 16px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+            transform: rotate(-90deg);
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
             margin-bottom: 10px;
-            color: #e7d3a1;
+            color: gold;
         }
 
-        .image-box {
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 30px;
+        .section-title {
+            margin-top: 18px;
+            font-size: 20px;
+            font-weight: bold;
+            color: gold;
         }
 
-        .image-box img {
-            width: 100%;
-        }
-
-        .info-box {
-            background: #111520;
-            padding: 25px;
-            border: 1px solid #2a3040;
-            border-radius: 12px;
-            margin-bottom: 35px;
-        }
-
-        .price {
-            font-size: 22px;
+        .auction-box {
+            background: white;
+            color: black;
+            padding: 16px;
+            border-radius: 14px;
             margin-top: 20px;
         }
 
-        .price span {
-            color: #d4af37;
-            font-weight: bold;
+        .auction-input {
+            margin-top: 12px;
+            display: flex;
+            gap: 10px;
         }
 
-        .bid-box {
-            background: #111520;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #2a3040;
-        }
-
-        input[type="number"] {
-            width: 100%;
-            padding: 12px;
-            font-size: 18px;
-            margin-top: 10px;
+        .auction-input input {
+            padding: 8px;
             border-radius: 8px;
-            border: 1px solid #2a3040;
-            background: #0b0f1a;
+        }
+
+        .btn {
+            padding: 10px 16px;
+            background: #0a1a33;
             color: white;
-        }
-
-        button {
-            margin-top: 15px;
-            width: 100%;
-            background: #d4af37;
-            border: none;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 20px;
-            font-weight: bold;
+            border-radius: 999px;
             cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .back {
-            display: block;
-            color: #d4af37;
-            margin-top: 35px;
-            font-size: 18px;
-            text-decoration: underline;
-            cursor: pointer;
+        .note {
+            font-size: 13px;
+            color: #222;
+            margin-top: 10px;
         }
 
-        .warning {
-            color: #ff6666;
-            margin-top: 15px;
-            font-size: 16px;
-        }
     </style>
-</head>
-
-<body>
-
-    <div class="container">
-
-        <h1>The Little Rich Mous</h1>
-
-        <div class="image-box">
-            <img src="the-little-rich-mous.jpg" alt="Little Rich Mous">
-        </div>
-
-        <div class="info-box">
-            <h2>Beschreibung</h2>
-            <p>Acryl auf Leinwand – 69,5 × 49 × 1,5 cm<br>
-            Ein einzigartiges Art-Piece im typischen Spectrum-Bild-Stil.</p>
-
-            <div class="price">
-                <p><span>Startpreis:</span> 1500 CHF</p>
-                <p><span>Aktuelles Gebot:</span> 1500 CHF</p>
-            </div>
-        </div>
-
-        <div class="bid-box">
-            <h2>Neues Gebot abgeben</h2>
-            <p>Mindestens 1500 CHF oder höher.</p>
-
-            <input type="number" id="bidInput" placeholder="Neues Gebot eingeben (CHF)">
-            
-            <button onclick="submitBid()">Gebot senden</button>
-
-            <p class="warning">⚠️ Hinweis: Ein einmal abgegebenes Gebot kann nicht zurückgezogen werden.</p>
-        </div>
-
-        <a class="back" href="galerie.html">← Zurück zur Galerie</a>
-
-    </div>
-
 
     <script>
-        function submitBid() {
-            let gebot = document.getElementById("bidInput").value;
+        let currentBid = 1500;
 
-            if (gebot < 1500) {
-                alert("Das Gebot muss mindestens 1500 CHF betragen.");
+        function placeBid() {
+            const input = document.getElementById("bidInput");
+            const msg = document.getElementById("bidMessage");
+            const value = parseFloat(input.value);
+
+            msg.textContent = "";
+
+            if (isNaN(value)) {
+                msg.textContent = "Bitte gib einen gültigen Betrag ein.";
+                msg.style.color = "red";
                 return;
             }
 
-            alert("Dein Gebot wurde erfolgreich gespeichert! (Dies ist eine Demo-Funktion.)");
+            if (value <= currentBid) {
+                msg.textContent = "Das Gebot muss höher sein als das aktuelle Gebot.";
+                msg.style.color = "red";
+                return;
+            }
+
+            currentBid = value;
+            document.getElementById("currentBid").textContent = currentBid + " CHF";
+
+            msg.textContent = "Gebot gespeichert. Achtung: Gebote können nicht zurückgezogen werden!";
+            msg.style.color = "green";
+
+            input.value = "";
         }
     </script>
+</head>
+<body>
+
+    <div class="navbar">THE LITTLE RICH MOUS</div>
+
+    <div class="container">
+
+        <a class="back-btn" href="galerie.html">← Zurück zur Galerie</a>
+
+        <div class="layout">
+            
+            <img class="art-img" src="the-little-rich-mous.jpg" alt="The Little Rich Mous">
+
+            <div class="info">
+
+                <div class="title">The Little Rich Mous</div>
+
+                <div class="section-title">Beschreibung</div>
+                <p>
+                    „The Little Rich Mous“ ist ein modernes Acrylkunstwerk auf hochwertiger Leinwand.
+                    Die graue Maus verbindet Luxus-Symbolik mit einer spielerischen, fast frechen Haltung.
+                    Der goldene Schriftzug vor dem kräftigen Pink verleiht dem Werk einen edlen Charakter –
+                    ein echtes Statement-Piece.
+                </p>
+
+                <div class="section-title">Details</div>
+                <p>
+                    Technik: Acrylfarben auf Leinwand<br>
+                    Masse: 69,5 × 49 × 1,5 cm<br>
+                    Unikat: Einzelstück<br>
+                    Versand: Gratis<br>
+                    Abholung: möglich
+                </p>
+
+                <div class="section-title">Auktion</div>
+                <div class="auction-box">
+                    <strong>Startpreis:</strong> 1500 CHF<br>
+                    <strong>Aktuelles Gebot:</strong> <span id="currentBid">1500 CHF</span>
+
+                    <div class="auction-input">
+                        <input id="bidInput" type="number" placeholder="Dein Gebot">
+                        <button class="btn" onclick="placeBid()">Gebot abgeben</button>
+                    </div>
+
+                    <div id="bidMessage" class="note"></div>
+
+                    <div class="note">
+                        ⚠️ Achtung: Gebote können NICHT zurückgezogen werden.
+                    </div>
+                </div>
+
+                <div class="section-title">Kontakt</div>
+                <p>
+                    Bei Fragen zur Auktion kannst du mich jederzeit kontaktieren:
+                    <br><br>
+                    📧 <a href="mailto:spectrum.art.mail@gmail.com" style="color: gold;">
+                        spectrum.art.mail@gmail.com
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
