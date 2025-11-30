@@ -5,98 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Little Rich Mouse – Details</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .image-wrapper {
-            position: relative;
-            max-width: 450px;
-        }
-        .art-image {
-            width: 100%;
-            border-radius: 12px;
-        }
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 40px;
-            color: white;
-            cursor: pointer;
-            opacity: 0.7;
-        }
-        .arrow-left { left: 10px; }
-        .arrow-right { right: 10px; }
-        .arrow:hover { opacity: 1; }
-
-        .zoom {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            font-size: 28px;
-            background: rgba(255,255,255,0.8);
-            padding: 8px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .back-link {
-            font-size: 20px;
-            margin-bottom: 20px;
-            display: inline-block;
-            color: #d4af37;
-        }
-    </style>
 </head>
 
 <body>
 
+<!-- Navigation -->
+<header class="header">
+    <div class="logo">SPECTRUM BILD</div>
+    <nav>
+        <a href="index.html">ÜBER</a>
+        <a href="signature.html">SIGNATURE PIECE</a>
+        <a href="galerie.html">GALERIE</a>
+        <a href="ablauf.html">ABLAUF</a>
+        <a href="kontakt.html">KONTAKT</a>
+    </nav>
+</header>
+
 <a href="galerie.html" class="back-link">← Zurück zur Galerie</a>
 
-<div class="detail-container">
+<!-- DETAIL SEITE -->
+<section class="detail-container">
 
-    <div class="image-wrapper">
-        <img id="mainImage" src="the-little-rich-mous.jpg" class="art-image">
-
-        <span class="arrow arrow-left" onclick="showFront()">❮</span>
-        <span class="arrow arrow-right" onclick="showBack()">❯</span>
-
-        <span class="zoom" onclick="zoomImage()">🔍</span>
+    <div class="detail-image-box">
+        <img src="the-little-rich-mous-back.jpg"
+             alt="The Little Rich Mouse Artwork"
+             class="detail-image">
     </div>
 
-    <div class="detail-info">
+    <div class="detail-content">
         <h1>The Little Rich Mouse</h1>
 
         <p><strong>Preis:</strong> 1500 CHF</p>
         <p><strong>Technik:</strong> Acryl auf Leinwand</p>
         <p><strong>Grösse:</strong> 69.5 × 49 × 1.5 cm</p>
 
-        <p>
-            „The Little Rich Mouse“ kombiniert frechen Luxus,
-            kräftige Farben und spielerisches Design. Die ikonische
-            Maus macht das Werk zu einem echten Statement-Piece.
+        <p class="detail-description">
+            Die kleine reiche Maus – ein modernes royales Emblem mit Humor.
+            Das Bild kombiniert Gold, Pink und eine ikonische Maus zu einem
+            echten Statement-Piece.
         </p>
 
-        <h2>Gebot abgeben</h2>
-        <form>
-            <input type="number" placeholder="Betrag in CHF" required>
-            <button type="submit">Gebot senden</button>
-        </form>
-
-        <p>Sobald du ein Gebot abgibst, kann es nicht mehr gelöscht werden.</p>
+        <a href="mailto:sophia.zuechner@gmail.com?subject=Gebot%20The%20Little%20Rich%20Mouse"
+           class="btn btn-primary">
+            Jetzt Gebot abgeben
+        </a>
     </div>
-</div>
 
-<script>
-    function showBack() {
-        document.getElementById("mainImage").src = "the-little-rich-mous-back.jpg";
-    }
-    function showFront() {
-        document.getElementById("mainImage").src = "the-little-rich-mous.jpg";
-    }
-    function zoomImage() {
-        window.open(document.getElementById("mainImage").src, "_blank");
-    }
-</script>
+</section>
 
 </body>
 </html>
